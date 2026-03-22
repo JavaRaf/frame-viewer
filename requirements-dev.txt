@@ -1,0 +1,2 @@
+# Optional: enables auto-reload in server.py and satisfies the type checker for watchdog imports.
+watchdog>=3.0

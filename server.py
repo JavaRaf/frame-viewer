@@ -13,13 +13,20 @@ import time
 import threading
 from pathlib import Path
 
-# Try to import watchdog for auto-reload functionality
+# Optional dependency: auto-reload when watchdog is installed (see requirements-dev.txt).
 try:
-    from watchdog.observers import Observer
-    from watchdog.events import FileSystemEventHandler
+    from watchdog.observers import Observer  # type: ignore[import-not-found]
+    from watchdog.events import FileSystemEventHandler  # type: ignore[import-not-found]
+
     WATCHDOG_AVAILABLE = True
 except ImportError:
     WATCHDOG_AVAILABLE = False
+    Observer = None
+
+    class FileSystemEventHandler:
+        """Stub base so ReloadHandler can be defined when watchdog is not installed."""
+
+        pass
 
 # Default port
 PORT = 8000
