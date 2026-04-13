@@ -26,7 +26,7 @@ const seasons = {
         episodes: {
             1: { name: "Episode 1", frames: 5040 }, 2: { name: "Episode 2", frames: 5040 }, 3: { name: "Episode 3", frames: 5040 }, 4: { name: "Episode 4", frames: 5040 },
             5: { name: "Episode 5", frames: 5040 }, 6: { name: "Episode 6", frames: 5040 }, 7: { name: "Episode 7", frames: 5040 }, 8: { name: "Episode 8", frames: 5040 }, 
-            9: { name: "Episode 9", frames: 5040 }
+            9: { name: "Episode 9", frames: 5040 }, 10: { name: "Episode 10", frames: 5005 }
         }
     }
 };
